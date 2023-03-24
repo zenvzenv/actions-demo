@@ -29,7 +29,7 @@ jobs:
           
   build-on-windows:
       runs-on: windows-latest
-      if: $(( success() ))
+      if: ${{ success() }}
       needs: [build-on-linux]
       steps:
         - name: Run a multi-line script
